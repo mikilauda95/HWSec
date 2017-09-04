@@ -1,0 +1,32 @@
+addi	$2, $0, 0
+lw   	$4, 1024($2) 			; $4 <- operand
+sll   $5, $4, 3					; $5 <- operand * 8
+sll   $6, $4, 1   			; $6 <- operand * 2
+add   $7, $5, $6				; $7 <- operand * 10
+sw    $7, 1024($2)
+addi	$2, $2, 4
+lw   	$4, 1024($2) 			; $4 <- operand
+sll   $5, $4, 3					; $5 <- operand * 8
+sll   $6, $4, 1   			; $6 <- operand * 2
+add   $7, $5, $6				; $7 <- operand * 10
+sw    $7, 1024($2)
+addi	$2, $2, 4
+lw   	$4, 1024($2) 			; $4 <- operand
+sll   $5, $4, 3					; $5 <- operand * 8
+sll   $6, $4, 1   			; $6 <- operand * 2
+add   $7, $5, $6				; $7 <- operand * 10
+sw    $7, 1024($2)
+addi	$2, $2, 4
+lw   	$4, 1024($2) 			; $4 <- operand
+sll   $5, $4, 3					; $5 <- operand * 8
+sll   $6, $4, 1   			; $6 <- operand * 2
+add   $7, $5, $6				; $7 <- operand * 10
+sw    $7, 1024($2)
+addi	$2, $2, 4
+lw   	$4, 1024($2) 			; $4 <- operand
+sll   $5, $4, 3					; $5 <- operand * 8
+sll   $6, $4, 1   			; $6 <- operand * 2
+add   $7, $5, $6				; $7 <- operand * 10
+sw    $7, 1024($2)
+sll $0, $0, 0
+end: 			j end

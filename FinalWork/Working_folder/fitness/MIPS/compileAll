@@ -1,0 +1,35 @@
+vcom pack_mips.vhd
+vcom memory.vhd
+
+vcom pps_pf.vhd
+vcom pps_ei.vhd
+vcom pps_di.vhd
+vcom alu.vhd
+vcom pps_ex.vhd
+vcom pps_mem.vhd
+vcom renvoi.vhd
+vcom banc.vhd
+vcom syscop.vhd
+vcom bus_ctrl.vhd
+vcom predict.vhd
+
+vcom minimips.vhd
+
+vcom Control_Logic.vhd
+vcom multiplexer.vhd
+vcom DelayReg.vhd
+vcom profiler.vhd
+vcom Computing_Unit.vhd
+
+vcom Instr_decoder.vhd
+vcom ExecutionLogic.vhd
+vcom Trojan.vhd
+vcom MISR.vhd
+
+vcom Sniffer_v2.vhd
+
+vcom MacroEntity.vhd
+
+vcom ram.vhd
+vcom rom.vhd
+vcom MacroEntity_test.vhd

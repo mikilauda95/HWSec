@@ -1,0 +1,195 @@
+# vsim macroentity_tb
+# vsim -c -do "vsim macroentity_tb; run 20000 ns; exit" 
+# Start time: 12:50:32 on May 07,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# //  Questa Sim
+# //  Version 10.4 linux Dec  2 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.pack_mips
+# Loading work.memory
+# Loading ieee.numeric_std(body)
+# Loading work.macroentity_tb(bench)#1
+# Loading work.minimips(rtl)#1
+# Loading work.pps_di(rtl)#1
+# Loading work.sniffer_v2(behavioral)#1
+# Loading work.trojan(v1)#1
+#  run 20000 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_rom
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/MIPS/U8_syscop
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/MIPS/U8_syscop
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/MIPS/U8_syscop
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/MIPS/U7_banc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/MIPS/U7_banc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/MIPS/U7_banc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/MIPS/U6_renvoi
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/MIPS/U6_renvoi
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/MIPS/U4_ex/U1_alu
+# ** Error: (vsim-86) Arg Value -2097471744 is out of NATURAL range 0 to 2147483647.
+#    Time: 0 ns  Iteration: 1  Instance: /macroentity_tb/U_rom
+# ** Error: (vsim-86) Arg Value -184549865 is out of NATURAL range 0 to 2147483647.
+#    Time: 0 ns  Iteration: 1  Instance: /macroentity_tb/U_rom
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /macroentity_tb/U_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /macroentity_tb/U_ram
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /macroentity_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60 ns  Iteration: 0  Instance: /macroentity_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60 ns  Iteration: 2  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60 ns  Iteration: 2  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 0  Instance: /macroentity_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 180 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 220 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 260 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 300 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 340 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 460 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 500 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 540 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 700 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 740 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 780 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 860 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 940 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 980 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1020 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1140 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1220 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1260 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1300 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1340 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1420 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1500 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1540 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1620 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1700 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1740 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1780 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1860 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1940 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 1980 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2020 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2140 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2220 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2540 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2620 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2660 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2700 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2780 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2860 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2900 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 2940 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3060 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3140 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3180 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3220 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3260 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3340 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3420 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3460 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3500 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3580 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3660 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3700 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3740 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3860 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3940 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 4460 ns  Iteration: 0  Instance: /macroentity_tb/U_MacroEntity/Sniffer/CU/PRO
+# ** Failure: Simulation Finished
+#    Time: 4460 ns  Iteration: 2  Process: /macroentity_tb/line__258 File: MacroEntity_test.vhd
+# Break in Process line__258 at MacroEntity_test.vhd line 261
+# Stopped at MacroEntity_test.vhd line 261
+#  exit
+# End time: 12:50:32 on May 07,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 75

@@ -1,0 +1,27 @@
+Starting code
+Read a word from memory, multiply it by 10, then store it back into the memory.
+Repeated 5 times, last store in memory is not executed because the processor returns.
+
+Best code
+
+
+
+
+
+uGP parameters
+Starting population = 10
+Individuals per population = 30
+Lambda = 10
+Generations to stop when stale = 10
+Max generations = 300
+Max time = 12000 s
+
+codeShuffler parameters
+Do-nothing probability = 70%
+NOP probability = 10%
+Swap probability = 10%
+Substitute probability = 10%
+
+
+Result and termination.
+Stopped at iteration 27 because genes became stale after 10 generations.

@@ -1,0 +1,19 @@
+;# test program for forwarding logic
+;#
+;# return values written starting at address baseRAM=1024
+org 0000
+
+addition:	addi $4, $0, 0		; initialize opp2 = 0
+			addi $6, $0, 1		; initialize mask2 = 00000001h	
+			addi $9, $0, 32		; initialize loop2 = 32
+			addi $10, $0, 1		; initialize flag end
+			addi $4, $0, 0		; initialize opp2 = 0
+			addi $6, $0, 1		; initialize mask2 = 00000001h	
+			addi $9, $0, 32		; initialize loop2 = 32
+			addi $10, $0, 1		; initialize flag end
+			addi $4, $0, 0		; initialize opp2 = 0
+			addi $6, $0, 1		; initialize mask2 = 00000001h	
+			addi $9, $0, 32		; initialize loop2 = 32
+			addi $10, $0, 1		; initialize flag end
+			
+end: 		j end

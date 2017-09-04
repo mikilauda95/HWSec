@@ -1,0 +1,20 @@
+org 0000
+addition:	addi $4, $0, 0		; initialize opp2 = 0
+			addi $6, $0, 0		; initialize mask2 = 00000001h
+			addi $9, $0, 32		; initialize loop2 = 32
+			addi $10, $0, 1		; initialize flag end
+			addi $7, $0, 65535
+
+	l1:		addi $3, $0, 127	; initialize opp1 = 0
+			beq  $4, $6, addition
+			sub  $9, $8, $10    ;
+
+			sw $9, 1024($0)		; store result in baseRAM = 1024
+			sw $8, 1024($0)		; store result in baseRAM = 1024
+			sw $5, 1024($0)		; store result in baseRAM = 1024
+			sw $3, 1024($0)		; store result in baseRAM = 1024
+			lw $4, 1024($0)
+			lw $5, 1024($0)
+
+end: 		j end
+			mul $9, $6, $9

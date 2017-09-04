@@ -1,0 +1,50 @@
+		addi $1, $0, 10		;counter elements
+		addi $2, $0, 0		;pointer elements
+
+        
+
+
+	
+loopelem:   addi $1, $1, -1		;decrease counter fact
+            lw $3, 1024($2)	;counter of fact
+            addi  $4, $0, 2		;pointer of fact
+            addi $5, $0, 1		;acc of fact(accf)
+            addi $3,$3,-1	 
+            add $8,$0,$0
+
+
+loopfact:   addi $3,$3,-1	 
+            add  $6, $0, $5		;accf -> operand
+            add  $7, $0, $4		;pointerf -> counterm
+            add  $8, $0, $0
+            addi $4, $4, 1
+
+loopmul:    addi $7, $7, -1		;decrease counter mul
+            add  $8, $8, $6		;accm=accm+operand
+		    bne $7, $0, loopmul	;if not finish, keep adding
+		    add $5 , $0, $8	;update the accf with the result of mult
+		    bne $3, $0, loopfact	;if not finish, keep multiplying
+            sw $5, 1024($2)	;load fact value to the same cell of memory
+            addi $2, $2, 4		;increase pointer fact
+            bne $1, $0, loopelem	;if not finish, keep taking elements from memory
+			
+end: 		j end
+			
+			
+;accf=1
+;pointer=1
+;countmul=1
+;accm = 0
+;accm = 1
+;countermult=0
+;accf=accmul=1
+;pointer=2
+;counterf=0
+;nobranch
+;load 1
+;pointerelem=8
+;counterele=8
+;branch
+
+
+

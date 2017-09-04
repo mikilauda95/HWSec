@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libXmlParser.a  CMakeFiles/XmlParser.dir/tinyxml.cc.o CMakeFiles/XmlParser.dir/tinyxmlerror.cc.o CMakeFiles/XmlParser.dir/tinyxmlparser.cc.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libXmlParser.a

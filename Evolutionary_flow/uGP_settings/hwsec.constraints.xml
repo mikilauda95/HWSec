@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.cad.polito.it/ugp3/transforms/constraintsScripted.xslt"?>
+<constraints
+  xmlns="http://www.cad.polito.it/ugp3/schemas/constraints"
+  id="One-Max" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cad.polito.it/ugp3/schemas/constraints http://www.cad.polito.it/ugp3/schemas/constraints.xsd">
+  <typeDefinitions>
+    <item type="constant" name="int_type">
+      <value>0</value>
+      <value>1</value>
+      <value>2</value>
+      <value>3</value>
+      <value>4</value>
+      <value>5</value>
+      <value>6</value>
+      <value>7</value>
+      <value>8</value>
+      <value>9</value>
+    </item>
+  </typeDefinitions>
+  <commentFormat><value/></commentFormat>
+  <identifierFormat>n<value /></identifierFormat>
+  <labelFormat><value/>: </labelFormat>
+  <uniqueTagFormat><value /></uniqueTagFormat>
+  <prologue id="globalPrologue"/>
+  <epilogue id="globalEpilogue"/>
+  <sections>
+    <section id="intString" prologueEpilogueCompulsory="false">
+      <prologue id="sectionPrologue"/>
+      <epilogue id="sectionEpilogue"/>
+      <subSections>
+        <subSection id="main" maxOccurs="50" minOccurs="50" maxReferences="0">
+          <prologue id="stringPrologue"/>
+          <epilogue id="stringEpilogue"/>
+          <macros maxOccurs="2" minOccurs="2" averageOccurs="2" sigma="0">
+            <macro id="intString" >
+              <expression><param ref="int"/></expression>
+                <parameters>
+                  <item type="definedType" ref="int_type" name="int" />
+                </parameters>
+            </macro>
+          </macros>
+        </subSection>
+      </subSections>
+    </section>
+  </sections>
+</constraints>

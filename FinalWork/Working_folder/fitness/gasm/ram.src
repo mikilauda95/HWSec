@@ -1,0 +1,13 @@
+;# RAM/ROM access
+;# return values written starting at address baseRAM=1024
+org 0000
+
+addition:	addi $4, $0, 240
+		addi $6, $0, 250	
+		sw $4, 1024($0)		; store result in baseRAM = 1024
+		sw $6, 1028($0)		; store result in baseRAM = 1024
+		lw $10, 1024($0)
+		lw $12, 1028($0)
+		nop
+		nop
+end: 		j end

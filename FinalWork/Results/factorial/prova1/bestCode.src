@@ -1,0 +1,46 @@
+	ADDIU $1, $0, 10	; counter elements
+	ADDIU $2, $0, 0	; pointer elements
+loopelem:   addi $1, $1, -1	ADDIU $1, $1, -1	; decrease counter fact
+	AND $3, $3, $3	; counter of fact
+	LW $3, 1024($2)	; 
+	ADDIU $4, $0, 2	; pointer of fact
+	ADDIU $5, $0, 1	; acc of fact(accf)
+            addi $3,$3,-1	 
+	ADDU $8, $0, $0	; 
+loopfact:   addi $3,$3,-1	 
+	ADDU $6, $0, $5	; accf -> operand
+	ADDU $7, $0, $4	; pointerf -> counterm
+	ADDU $8, $0, $0	; 
+	ADDIU $4, $4, 1	; 
+loopmul:    addi $7, $7, -1		;decrease counter mul
+	ADDU $8, $8, $6	; accm=accm+operand
+		    bne $7, $0, loopmul	;if not finish, keep adding
+	ADDU $5, $0, $8	; update the accf with the result of mult
+		    bne $3, $0, loopfact	;if not finish, keep multiplying
+	XOR $5, $5, $6	; load fact value to the same cell of memory
+	XOR $6, $6, $5	; 
+	XOR $5, $5, $6	; 
+	SW $6, 1024($2)	; 
+	XOR $5, $5, $6	; 
+	XOR $6, $6, $5	; 
+	XOR $5, $5, $6	; 
+	ADDIU $2, $2, 4	; increase pointer fact
+	XOR $1, $1, $0	; if not finish, keep taking elements from memory
+	BNE $1, $0, loopelem	; 
+end: 		j end
+;accf=1
+;pointer=1
+	SLL $0, $0, 0
+;countmul=1
+;accm = 0
+;accm = 1
+;countermult=0
+;accf=accmul=1
+;pointer=2
+;counterf=0
+	SLL $0, $0, 0 ;
+;nobranch
+;load 1
+;pointerelem=8
+;counterele=8
+;branch

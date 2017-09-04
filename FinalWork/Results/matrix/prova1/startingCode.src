@@ -1,0 +1,75 @@
+XOR $31, $31, $31	; i
+XOR $30, $30, $30	; j
+XOR $29, $29, $29	; k
+ADDI $28, $0, 2		; dim matrixes 350 ns
+XOR $10, $10, $10	; counter
+
+label: 
+	   XOR $30, $30, $30
+	   
+	   label2:
+			  XOR $29, $29, $29
+			  label3:
+					 
+					 LW $3, 1056($0)
+					 
+					 SLL $31, $31, 3
+					 SLL $29, $29, 2
+					 ADD $27, $31, $29
+					 LW $1, 1024($27)	;mat1[i][k] 825 ns
+					 SRL $31, $31, 3
+					 SRL $29, $29, 2
+					 
+					 SLL $29, $29, 3
+					 SLL $30, $30, 2
+					 ADD $26, $30, $29
+					 LW $2, 1040($26)	;mat2[k][j] 1220 ns
+					 SRL $29, $29, 3
+					 SRL $30, $30, 2
+					 
+					 
+					 MULT $1, $2
+					 			; MFHI $2
+					 MFLO $4	        ; ipothesis: multiplication generates a number max 32-bit long 1380ns
+					 
+					 ADD $3, $3, $4		; 1460 ns
+					 
+					 SW $3, 1056($0)
+					 
+					 ADDI $29, $29, 1	; 1620 ns /4940 ns
+                                         SLL $0, $0, 0
+					 bne $29, $28, label3   ; entire cycle, composed of 2 loop, ends first time at 2980 ns
+                                         SLL $0, $0, 0
+					
+	          
+		
+			  LW $3, 1056($0)
+			  SW $3, 1060($10)
+ 			  SW $0, 1056($0)
+
+			  ADDI $10, $10, 4	; 3500 ns
+			  
+			  ; ADDI $4, $4, 4
+			  
+			  ADDI $30, $30, 1	; 3540 ns
+			  SLL $0, $0, 0
+			  bne $30, $28, label2
+                          SLL $0, $0, 0
+
+	   ADDI $31, $31, 1
+	   SLL $0, $0, 0
+	   bne $31, $28, label
+           SLL $0, $0, 0
+	
+XOR $10, $10, $10
+ADDI $2, $0, 16
+
+label4:	LW $1, 1060($10)		;this cycle is very usefull only for debug purposes
+        SW $1, 1024($10)
+	ADDI $10, $10, 4
+        SLL $0, $0, 0
+	BNE $10, $2, label4
+
+
+SLL $0, $0, 0		
+end: j end

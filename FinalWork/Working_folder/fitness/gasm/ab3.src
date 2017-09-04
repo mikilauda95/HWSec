@@ -1,0 +1,28 @@
+;# test program for forwarding logic
+;#
+;# return values written starting at address baseRAM=1024
+org 0000
+
+			addi $1, $6, 0		
+			addi $2, $7, 0		
+			addi $3, $8, 32		
+			addi $4, $3, 1		
+			addi $5, $4, 4294967295
+			
+
+			sw $1, 1024($0)		
+			sw $2, 1024($0)		
+			sw $3, 1024($0)		
+			sw $4, 1024($0)		
+			lw $1, 1024($0)
+			lw $2, 1024($0)
+			
+			addi $1, $0, 100
+label:		addi $1, $1, -1
+			sll $0, $0, 0
+			bne $1, $0, label
+			sll $0, $0, 0
+			
+end: 		j end
+			
+			

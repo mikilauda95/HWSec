@@ -1,0 +1,20 @@
+Starting code
+Read the first 10 words from the memory, compute their average, then store it back at address 0
+
+uGP parameters
+Starting population = 50 (lower populations had difficulty in finding many individuals with fitness != 0) 
+Individuals per population = 100
+Lambda = 25
+Generations to stop when stale = 20
+Max generations = 1000
+Max time = 12000 s
+
+codeShuffler parameters
+Do-nothing probability = 75%
+NOP probability = 10%
+Swap probability = 5%
+Substitute probability = 10%
+
+
+Result and termination.
+Stopped at iteration 121 because genes became stale after 20 generations.

@@ -1,0 +1,23 @@
+	ADDIU $1, $6, 0	; 
+	ADDIU $2, $0, 0	; 
+	ADDIU $3, $8, 32	; 
+	ADDIU $4, $9, 1	; 
+	ADDIU $5, $10, 65535	; 
+	ADDIU $1, $0, 10	; 
+label:		addi $1, $1, -1
+	ADDI $0, $0, 0	; 
+	SLLV $0, $0, $0	; 
+	XOR $1, $1, $6	; 
+	XOR $6, $6, $1	; 
+	XOR $1, $1, $6	; 
+	SW $6, 1024($2)	; 
+	XOR $1, $1, $6	; 
+	XOR $6, $6, $1	; 
+	XOR $1, $1, $6	; 
+	ADDIU $2, $2, 4	; 
+		bne $1, $0, label
+	ADDI $0, $0, 0	; 
+	SLLV $0, $0, $0	; 
+end: 		j end
+	SLL $0, $0, 0
+	SLL $0, $0, 0 ;

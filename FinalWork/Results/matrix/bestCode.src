@@ -1,0 +1,120 @@
+	XORI $31, $31, -1	; i
+	AND $31, $31, $31	; 
+	XORI $31, $31, -1	; 
+	XORI $31, $31, -1	; 
+	AND $31, $31, $31	; 
+	OR $31, $31, $31	; 
+	XORI $31, $31, -1	; 
+	XORI $30, $30, -1	; j
+	AND $30, $30, $30	; 
+	XORI $30, $30, -1	; 
+	XORI $30, $30, -1	; 
+	AND $30, $30, $30	; 
+	OR $30, $30, $30	; 
+	XORI $30, $30, -1	; 
+	XORI $29, $29, -1	; k
+	AND $29, $29, $29	; 
+	XORI $29, $29, -1	; 
+	XORI $29, $29, -1	; 
+	AND $29, $29, $29	; 
+	OR $29, $29, $29	; 
+	XORI $29, $29, -1	; 
+	ADDIU $28, $0, 2	; dim matrixes 350 ns
+	XORI $10, $10, -1	; counter
+	AND $10, $10, $10	; 
+	XORI $10, $10, -1	; 
+	XORI $10, $10, -1	; 
+	AND $10, $10, $10	; 
+	OR $10, $10, $10	; 
+	XORI $10, $10, -1	; 
+label: 
+	   XOR $30, $30, $30
+	   label2:
+			  XOR $29, $29, $29
+			  label3:
+	XOR $3, $3, $3	; 
+	AND $3, $3, $3	; 
+	LW $3, 1056($0)	; 
+					 SLL $31, $31, 3
+					 SLL $29, $29, 2
+	ADDU $27, $31, $29	; 
+	XOR $1, $1, $1	; mat1[i][k] 825 ns
+	AND $1, $1, $1	; 
+	LW $1, 1024($27)	; 
+					 SRL $31, $31, 3
+					 SRL $29, $29, 2
+					 SLL $30, $30, 2
+					 SLL $29, $29, 3
+	ADDU $26, $30, $29	; 
+	XOR $2, $2, $2	; mat2[k][j] 1220 ns
+	AND $2, $2, $2	; 
+	LW $2, 1040($26)	; 
+					 SRL $29, $29, 3
+					 SRL $30, $30, 2
+	SLL $0, $0, 0 ;
+	MULTU $1, $2	; 
+					 			; MFHI $2
+	XOR $4, $4, $4	; ipothesis: multiplication generates a number max 32-bit long 1380ns
+	MFLO $4	; 
+	ADDU $3, $3, $4	; 1460 ns
+	XOR $3, $3, $6	; 
+	XOR $6, $6, $3	; 
+	XOR $3, $3, $6	; 
+	SW $6, 1056($0)	; 
+	XOR $3, $3, $6	; 
+	XOR $6, $6, $3	; 
+	XOR $3, $3, $6	; 
+	ADDIU $29, $29, 1	; 1620 ns /4940 ns
+                                         SLL $0, $0, 0
+					 bne $29, $28, label3   ; entire cycle, composed of 2 loop, ends first time at 2980 ns
+                                         SLL $0, $0, 0
+	SLL $0, $0, 0
+	XOR $3, $3, $3	; 
+	AND $3, $3, $3	; 
+	LW $3, 1056($0)	; 
+	XOR $3, $3, $6	; 
+	XOR $6, $6, $3	; 
+	XOR $3, $3, $6	; 
+	SW $6, 1060($10)	; 
+	XOR $3, $3, $6	; 
+	XOR $6, $6, $3	; 
+	XOR $3, $3, $6	; 
+	XOR $0, $0, $6	; 
+	XOR $6, $6, $0	; 
+	XOR $0, $0, $6	; 
+	SW $6, 1056($0)	; 
+	XOR $0, $0, $6	; 
+	XOR $6, $6, $0	; 
+	XOR $0, $0, $6	; 
+	ADDIU $10, $10, 4	; 3500 ns
+			  ; ADDI $4, $4, 4
+	ADDIU $30, $30, 1	; 3540 ns
+	ADDI $0, $0, 0	; 
+			  bne $30, $28, label2
+	SLLV $0, $0, $0	; 
+	ADDI $0, $0, 0	; 
+	SLLV $0, $0, $0	; 
+	ADDIU $31, $31, 1	; 
+	ADDI $0, $0, 0	; 
+	SLLV $0, $0, $0	; 
+	   bne $31, $28, label
+	ADDI $0, $0, 0	; 
+	SLLV $0, $0, $0	; 
+XOR $10, $10, $10
+	ADDIU $2, $0, 16	; 
+label4:	XOR $1, $1, $1	; this cycle is very usefull only for debug purposes
+	AND $1, $1, $1	; 
+	LW $1, 1060($10)	; 
+	XOR $1, $1, $6	; 
+	XOR $6, $6, $1	; 
+	XOR $1, $1, $6	; 
+	SW $6, 1024($10)	; 
+	XOR $1, $1, $6	; 
+	XOR $6, $6, $1	; 
+	XOR $1, $1, $6	; 
+	ADDIU $10, $10, 4	; 
+	ADDI $0, $0, 0	; 
+	SLLV $0, $0, $0	; 
+	BNE $10, $2, label4
+SLL $0, $0, 0		
+end: j end

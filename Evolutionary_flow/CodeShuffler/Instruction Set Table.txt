@@ -1,0 +1,294 @@
+%
+ADD Rd, Rs, Rt
+
+ADDU Rd, Rs, Rt
+%
+ADDI Rt, Rs, N
+
+ADDIU Rt, Rs, N
+%
+ADDIU Rt, Rs, N
+
+ADDI Rt, Rs, N
+%
+ADDU Rd, Rs, Rt
+
+ADD Rd, Rs, Rt
+%
+AND Rd, Rs, Rt
+
+XORI Rs, Rs, 0xffff
+XORI Rt, Rt, 0xffff
+OR Rd, Rs, Rt
+XORI Rd, Rd, 0xffff
+XORI Rs, Rs, 0xffff
+XORI Rt, Rt, 0xffff
+
+ANDI Rs, Rs, 0xffff
+ANDI Rt, Rt, 0xffff
+AND Rd, Rs, Rt
+%
+ANDI Rt, Rs, N
+
+XORI Rs, Rs, 0xffff
+ADD Rt, R0, Rs
+ADDI Rs, R0, N
+XORI Rs, Rs, 0xffff
+NOR Rt, Rt, Rs
+
+ADD Rt, R0, N
+XORI Rt, Rt, 0xffff
+XORI Rs, Rs, 0xffff
+NOR Rt, Rt, Rs
+XORI Rs, Rs, 0xffff
+%
+BEQ Rs, Rt, offset
+
+XOR Rs, Rs, Rt
+BEQ Rs, R0, offset
+
+ADDI Rs, Rs, 1
+ADDI Rt, Rt, 1
+BEQ Rs, Rt, offset
+
+ANDI Rs, Rs, 0xffff
+BEQ Rs, Rt, offset
+%
+BGEZ Rs, offset
+
+BEQ Rs, R0, offset
+BGTZ Rs, offset
+
+BEQ Rs, R0, offset
+BGEZ Rs, offset
+%
+BGEZAL Rs, offset
+
+AND Rs, Rs, 0xffff
+BGEZAL Rs, offset
+
+OR Rs, Rs, 0x0000
+BGEZAL Rs, offset
+%
+BGTZ Rs, offset
+
+AND Rs, Rs, 0xffff
+BGTZ Rs, offset
+
+OR Rs, Rs, 0x0000
+BGTZ Rs, offset
+%
+BLEZ Rs, offset
+
+BEQ Rs, R0, offset
+BLTZ Rs, offset
+
+AND Rs, Rs, 0xffff
+BLEZ Rs, offset
+
+OR Rs, Rs, 0x0000
+BLEZ Rs, offset
+%
+BLTZ Rs, offset
+
+AND Rs, Rs, 0xffff
+BLTZ Rs, offset
+
+OR Rs, Rs, 0x0000
+BLTZ Rs, offset
+%
+BLTZAL Rs, offset
+
+AND Rs, Rs, 0xffff
+BLTZAL Rs, offset
+
+OR Rs, Rs, 0x0000
+BLTZAL Rs, offset
+%
+BNE Rs, Rt, offset
+
+XOR Rs, Rs, Rt
+BNE Rs, R0, offset
+%
+BREAK
+
+BREAK
+%
+COP0 cop_func
+
+COP0 cop_func
+%
+J target
+
+J target
+%
+JAL target
+
+JAL target
+%
+JALR Rd, Rs
+
+JALR Rd, Rs
+%
+JR Rs
+
+AND Rs, Rs, Rs
+JR Rs
+%
+LUI Rt, N
+
+SLL, Rt, Rt, 16
+ADDI Rt, Rt, N
+%
+LW Rt, offset
+
+AND Rt, Rt, Rt
+LW Rt, offset
+%
+LWC0 cs, offset
+
+LWC0 cs, offset
+%
+MFC0 Rt, Cs
+
+MFC0 Rt, Cs
+%
+MFHI Rd
+
+XOR Rd, Rd
+MFHI Rd
+%
+MFLO Rd
+
+XOR Rd, Rd
+MFLO Rd
+%
+MTC0 Rt, cs
+
+MTC0 Rt, cs
+%
+MTHI Rs
+
+MTHI Rs
+%
+MTLO Rs
+
+MTLO Rs
+%
+MULT Rs, Rt
+
+MULTU Rs, Rt
+%
+MULTU Rs, Rt
+
+MULT Rs, Rt
+%
+NOR Rd, Rs, Rt
+
+OR Rd, Rs, Rt
+XORI Rd, Rd, 0xffff
+%
+OR Rd, Rs, Rt
+
+NOR Rd, Rs, Rt
+XORI Rd, Rd, 0xffff
+%
+ORI Rt, Rs, N
+
+ADD Rt, R0, N
+NOR Rt, Rt, Rs
+%
+SLL Rd, Rt, N
+
+ADD Rd, r0, N
+SLLV Rd, Rt, Rd
+%
+SLLV Rd, Rt, Rs
+
+ADDI Rs, Rs, -1
+SLL Rt, Rt, 1
+SLLV Rd, Rt, Rs
+%
+SLT Rd, Rs, Rt
+
+SUB Rd, Rs, Rt
+SRL Rd, Rd, 31
+%
+SLTI Rt, Rs, N
+
+ADDI Rt, Rs, -N
+SRL Rt, Rt, 31
+%
+SLTIU Rt, Rs, N 
+
+ADDIU Rt, R0, N
+SLTU Rt, Rs, Rt
+%
+SLTU Rd, Rs, Rt
+
+SLTU Rd, Rs, Rt
+% 
+SRA Rd, Rt, sa
+
+ADDI Rd, R0, sa
+SRAV Rd, Rt, Rd
+%
+SRAV Rd, Rt, Rs
+
+SRA Rt, Rt, 1
+ADDI Rs, Rs, -1
+SRAV Rd, Rt, Rs
+%
+SRL Rd, Rt, sa
+
+ADDI Rd, R0, sa
+SRLV Rd, Rt, Rd
+%
+SRLV Rd, Rt, Rs
+
+SRLV Rd, Rt, Rs
+%
+SUB Rd, Rs, Rt
+
+XORI Rt, Rt, 0xffff
+ADD Rd, Rs, Rt
+ADDI Rd, Rd, 1
+XORI Rt, Rt, 0xffff
+%
+SUBU Rd, Rs, Rt
+
+SUB Rd, Rs, Rt
+%
+SW Rt, offset 
+
+XOR Rt, Rt, Rx
+XOR Rx, Rx, Rt
+XOR Rt, Rt, Rx
+SW Rx, offset
+XOR Rt, Rt, Rx
+XOR Rx, Rx, Rt
+XOR Rt, Rt, Rx
+%
+SWC0 cs, offset
+
+SWC0 cs, offset
+%
+SYSCALL 
+
+SYSCALL
+%
+XOR Rd, Rs, Rt
+
+XORI Rt, Rt, 0xffff
+AND Rd, Rs, Rt
+XORI Rt, Rt, 0xffff
+XORI Rs, Rs, 0xffff
+AND Rs, Rs, Rt
+OR Rd, Rd, Rs
+XORI Rs, Rs, 0xffff
+%
+XORI Rt, Rs, N
+
+ADDI Rt, R0, N
+XOR Rt, Rs, Rt
+%

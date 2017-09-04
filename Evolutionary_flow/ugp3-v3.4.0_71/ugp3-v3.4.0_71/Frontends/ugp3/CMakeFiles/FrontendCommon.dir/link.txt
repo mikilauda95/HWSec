@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libFrontendCommon.a  CMakeFiles/FrontendCommon.dir/Argument.cc.o CMakeFiles/FrontendCommon.dir/MicroGPSettings.cc.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libFrontendCommon.a

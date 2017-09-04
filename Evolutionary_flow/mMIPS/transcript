@@ -1,0 +1,87 @@
+# vsim macroentity_tb 
+# vsim macroentity_tb 
+# //  ModelSim SE 6.2g Feb 21 2007 Linux 2.6.18-410.el5
+# //
+# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading work.pack_mips
+# Loading work.memory
+# Loading work.macroentity_tb(bench)#1
+# Loading work.macroentity(behavioral)#1
+# Loading work.minimips(rtl)#1
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.pps_pf(rtl)
+# Loading work.pps_ei(rtl)
+# Loading work.pps_di(rtl)
+# Loading work.pps_ex(rtl)
+# Loading work.alu(rtl)
+# Loading work.pps_mem(rtl)
+# Loading work.renvoi(rtl)
+# Loading work.banc(rtl)
+# Loading work.syscop(rtl)
+# Loading work.bus_ctrl(rtl)
+# Loading work.predict(rtl)#1
+# Loading work.sniffer_v2(behavioral)#1
+# Loading work.instr_decoder(behavioral)
+# Loading work.executionlogic(behavioral)
+# Loading work.misr(rtl)#1
+# Loading work.trojan(v1)
+# Loading work.computing_unit(behavioral)
+# Loading work.control_logic(behavioral)
+# Loading work.multiplexer(behavioral)
+# Loading work.profiler(behavioral)
+# Loading work.delayreg(behavioral)
+# Loading work.ram(bench)#1
+# Loading work.rom(bench)#1
+# run -all 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_rom
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_macroentity/mips/u8_syscop
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_macroentity/mips/u8_syscop
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_macroentity/mips/u8_syscop
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_macroentity/mips/u7_banc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_macroentity/mips/u7_banc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_macroentity/mips/u7_banc
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_macroentity/mips/u6_renvoi
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_macroentity/mips/u6_renvoi
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /macroentity_tb/u_macroentity/mips/u4_ex/u1_alu
+# ** Error: numstd_conv_unsigned_nuA: NATURAL arg value is negative (-63684)
+#    Time: 0 ns  Iteration: 1  Instance: /macroentity_tb/u_rom
+# ** Error: numstd_conv_unsigned_nuA: NATURAL arg value is negative (-63712)
+#    Time: 0 ns  Iteration: 1  Instance: /macroentity_tb/u_rom
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /macroentity_tb/u_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /macroentity_tb/u_ram
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 2  Instance: /macroentity_tb/u_macroentity/sniffer/cu/pro
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 2  Instance: /macroentity_tb/u_macroentity/sniffer/cu/pro
+# ** Failure: Simulation Finished
+#    Time: 1500 ns  Iteration: 1  Process: /macroentity_tb/line__258 File: /home/ms17.6/Sanchez/uGP_MIPS/MacroEntity_test.vhd
+# Break in Process line__258 at /home/ms17.6/Sanchez/uGP_MIPS/MacroEntity_test.vhd line 261
+# Stopped at /home/ms17.6/Sanchez/uGP_MIPS/MacroEntity_test.vhd line 261 
+# exit 

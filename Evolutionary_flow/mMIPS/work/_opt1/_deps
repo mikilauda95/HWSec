@@ -1,0 +1,10 @@
+H 2141964 11 3 0 3 3 0 0 0 0
+L 4 ieee 19 $MODEL_TECH/../ieee
+L 3 std 18 $MODEL_TECH/../std
+L 4 work 6 ./work
+D 13 ./work.memory F^DVaTdZj<RY:a<=_OnCL2 0 1
+D 16 ./work.pack_mips NZ[5f^lnM5jn<=W7OdQR?2 1 1
+D 17 ./work.ram(bench) G^LEEF71L=G0VALTTa20V1 2 1
+2 0  0 Od5HYlCBmGZ<J0KFKTfUT2 0 0 1
+2 0  1 ZJGCT@NN=AK?XijAnY@RU3 2 2 1
+2 0  0 0b;:X>nKz@[3nV>T@Wd:^3 1 1 1

@@ -1,0 +1,3 @@
+In the initial code, there were 39 tuples.
+In the final code, only 17 of those tuples are left.
+56.41026% of possible trojans have been mitigated.

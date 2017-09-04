@@ -1,0 +1,31 @@
+
+
+												addi $1, $0, 10							; 10 loops
+												addi $2, $0, 0							; memory offset
+
+												beq $1, $0, end							; check if all sqrt have been done
+
+												lw $4, data($2)							; load next square
+												jal sqrt										; compute sqrt
+												sw $8, solutions($2)							; save result
+
+												addi $2, $0, 8							; increment offset
+												addi $1, $0, -1							; decrement counter
+
+end:							 			j end
+
+data: 									.word 1, 1, 1, 1, 1, 1, 1, 1, 1 ,1
+solutions: 							.space 10
+
+sqrt:										add $5, $0, $4							; x = n
+												addi $6, $0, 0							; i = 0
+												addi $7, $0, 1							; d = 1
+												addi $8, $0, 0							; r = 0
+
+loop:										sub $9, $8, $5							; r - x
+												bgez $9, ret   							; if r >= x, return
+												add $8, $8, $7							; r = r + d
+												addi $7, $0, 2							; d = d + 2
+												j loop
+
+ret:									jr $31

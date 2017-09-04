@@ -1,0 +1,8 @@
+# vsim macroentity_tb
+# vsim -c -do "vsim macroentity_tb; run 20 us; exit" 
+# Start time: 13:21:57 on May 05,2017
+# ** Error: (vsim-19) Failed to access library 'work' at "work".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 13:21:58 on May 05,2017, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

@@ -1,0 +1,19 @@
+;# test program for forwarding logic
+;#
+;# return values written starting at address baseRAM=1024
+org 0000
+
+addition:	sw $9, 1024($0)		; store result in baseRAM = 1024
+			sw $8, 1024($0)		; store result in baseRAM = 1024
+			sw $5, 1024($0)		; store result in baseRAM = 1024
+			sw $3, 1024($0)		; store result in baseRAM = 1024
+			lw $4, 1024($0)
+			lw $5, 1024($0)
+			sw $9, 1024($0)		; store result in baseRAM = 1024
+			sw $8, 1024($0)		; store result in baseRAM = 1024
+			sw $5, 1024($0)		; store result in baseRAM = 1024
+			sw $3, 1024($0)		; store result in baseRAM = 1024
+			lw $4, 1024($0)
+			lw $5, 1024($0)
+			
+end: 		j end

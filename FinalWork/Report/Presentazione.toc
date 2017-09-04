@@ -1,0 +1,8 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {2}Study cases}{6}
+\contentsline {subsection}{\numberline {2.1}Unrolled Fibonacci}{6}
+\contentsline {subsection}{\numberline {2.2}Average of 10 numbers}{8}
+\contentsline {subsection}{\numberline {2.3}Factorials}{10}
+\contentsline {subsection}{\numberline {2.4}Matrix product}{12}
+\contentsline {section}{\numberline {A}Instruction substitution table}{16}

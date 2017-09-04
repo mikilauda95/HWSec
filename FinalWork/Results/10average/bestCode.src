@@ -1,0 +1,33 @@
+	ADDIU $1, $0, 10	; initialize loop counter to 0
+	ADDIU $5, $0, 0	; initialize accumulator to 0
+label:		addi $1, $1, -1
+	AND $3, $3, $3	; load from memory
+	LW $3, 1024($2)	; 
+	ADDU $5, $3, $5	; accumulate
+	ADDIU $2, $2, 4	; 
+		bne $1, $0, label	; loop
+	ADDI $10, $0, 7	; x * 128
+	SLLV $10, $5, $10	; 
+	ADDU $6, $10, $0	; 128 x
+	ADDI $11, $0, 6	; x * 64
+	SLLV $11, $5, $11	; 
+	ADDU $6, $11, $6	; 192 x
+	ADDI $12, $0, 3	; x * 8
+	SLLV $12, $5, $12	; 
+	ADDU $6, $12, $6	; 200 x
+	ADDI $13, $0, 2	; x * 4
+	SLLV $13, $5, $13	; 
+	ADDU $6, $13, $6	; 204 x
+	ADDU $6, $5, $6	; 205 x
+	ADDI $5, $0, 11	; 205x/2048 = x/10
+	SRLV $5, $6, $5	; 
+	XOR $5, $5, $6	; 
+	XOR $6, $6, $5	; 
+	XOR $5, $5, $6	; 
+	SW $6, 1024($0)	; 
+	XOR $5, $5, $6	; 
+	XOR $6, $6, $5	; 
+	XOR $5, $5, $6	; 
+	ADDI $0, $0, 0	; 
+	SLLV $0, $0, $0	; 
+end: 		j end
