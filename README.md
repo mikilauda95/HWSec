@@ -8,6 +8,11 @@ The *__Report.pdf__* file aims at gathering the result of applying an evolutiona
 
 Project developed for the courses of _Computer Architectures_ and _Specification and Simulation of Digital Systems_ at Politecnico di Torino, year 2016-2017.
 
+Here is a short presentation video is available here:
+
+https://www.youtube.com/watch?v=jyF__vjLnX0
+
+
 ### Prerequisites
 
 + ModelSim Altera to run simulations
